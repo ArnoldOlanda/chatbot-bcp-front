@@ -14,7 +14,9 @@
     "graphql": "^16.8.1",
     "graphql-ws": "^5.14.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react--customizable-chat-bot": "^1.0.6",
+    "react-dom": "^18.2.0",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
