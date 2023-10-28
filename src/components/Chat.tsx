@@ -2,7 +2,7 @@ import React from "react";
 import { BoxChat } from "./BoxChat";
 
 export function Chat() {
-  const imageURL = "/src/assets/back.jpg";
+  const imageURL = "/src/assets/bg.png";
 
   return (
     <div className="flex justify-center items-center h-screen w-screen">

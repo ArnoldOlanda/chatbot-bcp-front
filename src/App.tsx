@@ -1,6 +1,7 @@
 import "./App.css";
+import { Chat } from "./components/Chat";
 //import { ApolloClientTest } from "./components/ApolloClientTest";
-import { Chat } from "./components/pantalla_p";
+
 function App() {
   return (
     <>
