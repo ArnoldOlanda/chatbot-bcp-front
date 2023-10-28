@@ -1,58 +1,12 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BoxMesagge } from "./BoxMesagge";
 
-export const BoxMesagges = () => {
-  const flujo = [
-    {
-      rol: "chat",
-      msg: "mensaje1",
-    },
-    {
-      rol: "person",
-      msg: "mensaje2",
-    },
-    {
-      rol: "chat",
-      msg: "mensaje1",
-    },
-    {
-      rol: "person",
-      msg: "mensaje2",
-    },
-    {
-      rol: "chat",
-      msg: "mensaje1",
-    },
-    {
-      rol: "person",
-      msg: "mensaje2",
-    },
-    {
-      rol: "chat",
-      msg: "mensaje1",
-    },
-    {
-      rol: "person",
-      msg: "mensaje2",
-    },
-    {
-      rol: "chat",
-      msg: "mensaje1",
-    },
-    {
-      rol: "person",
-      msg: "mensaje2",
-    },
-    {
-      rol: "chat",
-      msg: "mensaje1",
-    },
-    {
-      rol: "person",
-      msg: "mensaje2",
-    },
-  ];
+/**
+ * Este elemento representa el container que mostrara los las burbujas de mensajes entre el usuario y el chatbot
+ * @returns JSX.Element
+ */
 
+export const BoxMesagges = ({ messages }: any) => {
   const messageContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -60,17 +14,17 @@ export const BoxMesagges = () => {
       messageContainerRef.current.scrollTop =
         messageContainerRef.current.scrollHeight;
     }
-  }, [flujo]);
+  }, [messages]);
 
   return (
     <div
       ref={messageContainerRef}
       className={"flex flex-1 flex-col  py-3 px-3 overflow-y-auto  "}
     >
-      {flujo.map((e) => (
+      {messages.map((e) => (
         <BoxMesagge
           text={`${e.msg}`}
-          color={e.rol == "chat" ? "white" : "rgba(217, 217, 217, 1)"}
+          color={e.rol == "chat" ? "#c9d1f7" : "rgba(217, 217, 217, 1)"}
           sx={{ alignSelf: e.rol == "chat" ? "start" : "end" }}
         />
       ))}

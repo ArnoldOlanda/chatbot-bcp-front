@@ -1,5 +1,10 @@
 import React from "react";
 
+/**
+ * Este elemento representa el cuerpo de la burbuja de los mensajes
+ * @returns JSX.Element
+ */
+
 interface Props {
   text: string;
   color: string;
@@ -9,10 +14,10 @@ interface Props {
 export const BoxMesagge = ({ color, text, sx }: Props) => {
   return (
     <div
-      className={`flex min-h-[40px] max-w-[300px] rounded-md px-3 py-1 items-center mb-3  `}
-      style={{ background: color, ...sx, border: "1px gray solid" }}
+      className={`flex max-w-[300px] rounded-md px-3 py-1 items-center mb-3  `}
+      style={{ background: color, ...sx }}
     >
-      <b>{text}</b>
+      <p>{text}</p>
     </div>
   );
 };

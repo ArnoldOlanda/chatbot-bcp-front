@@ -6,14 +6,14 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import { splitLink } from "./graphql/index.ts";
 
 const client = new ApolloClient({
-    link: splitLink,
-    cache: new InMemoryCache(),
+  link: splitLink,
+  cache: new InMemoryCache(),
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
-        <ApolloProvider client={client}>
-            <App />
-        </ApolloProvider>
-    </React.StrictMode>
+  <React.StrictMode>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </React.StrictMode>
 );
